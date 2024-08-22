@@ -5,10 +5,16 @@ export default function Home() {
     <div>
       <h1>this is home page</h1>
       <Link href="/products" className="btn">
-        Blog
+        products
       </Link>
       <Link href="/dashboard" className="btn">
-        Blog
+        dashboard
+      </Link>
+      <Link href="/blog/one" className="btn">
+        Blog one
+      </Link>
+      <Link href="/blog/two" className="btn">
+        Blog two
       </Link>
     </div>
   );

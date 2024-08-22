@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import "./globals.css";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,23 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
+  const [input, setInput] = useState("");
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Link href="/login" className="text-green-700">
-          {" "}
-          login
-        </Link>
-        <Link href="/register" className="text-green-700">
-          {" "}
-          register
-        </Link>
-        <Link href="/forgot-password" className="text-green-700">
-          {" "}
-          forgot password
-        </Link>
-        <h1 className="bg-red-500 h-24">this is navbar</h1>
         {children}
+        <h1 className="bg-red-500 h-24">this is navbar</h1>
 
         <h1 className="bg-green-500 h-24">this is footer</h1>
       </body>
